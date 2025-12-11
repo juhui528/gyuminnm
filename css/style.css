@@ -386,6 +386,11 @@ header .header_i .ham .ham_i .line{
   align-items: center;
   gap: 0 16px;
 }
+.portfolio .portfolio_i .portfolio_c .p_box .p_text .pt_link .link_box a{
+  display: flex;
+  align-items: center;
+  gap: 0 16px;
+}
 
 .portfolio .portfolio_i .portfolio_c .p_box .p_text .pt_link .link_box.pdf{
   border: 1px solid #C80A0A ;
