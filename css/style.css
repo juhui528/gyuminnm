@@ -12,6 +12,11 @@
   --iconFilter: invert(0);
 
   --scrollThumb: rgba(0, 0, 0, 0.856);
+
+  
+  transition: 
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 [data-theme="dark"]{
@@ -318,7 +323,7 @@ header .header_i .ham .ham_i .line {
   justify-content: space-between;
   gap: 72px 0;
   flex-wrap: wrap;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
 }
 
 .skills .skills_i .skills_c .s_box {
@@ -546,9 +551,15 @@ header .header_i .ham .ham_i .line {
 * {
   scrollbar-color: var(--scroll-thumb) transparent;
 }
+/* //Firefox */
 
 /* //PORTFOLIO */
 
+
+.card.show {
+  opacity: 1;
+  transform: translateY(0) scale(0.95);
+}
 
 /* CONTACT */
 .contact {
@@ -630,4 +641,20 @@ footer .footer_i .social {
   position: fixed;
   top: 80vh;
   left: 90vw;
+
+  border: none;
+  background-color: var(--text);
+  color: var(--bg);
+  border-radius: 30px;
+}
+
+
+
+@media screen and (max-width: 1200px) {
+  header .header_i nav{
+    display: none;
+  }
+  header .header_i .ham{
+    display: block;
+  }
 }

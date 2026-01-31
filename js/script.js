@@ -19,6 +19,26 @@ document.addEventListener('DOMContentLoaded', () => {
     const theme = body.dataset.theme === 'dark' ? 'light' : 'dark';
     body.dataset.theme = theme;
     localStorage.setItem('theme', theme);
+
+    toggle.textContent = theme === 'dark' ? 'light' : 'dark';
+  });
+
+   $(window).on('scroll load', function () {
+  $('.card').each(function (index) {
+    const cardTop = $(this).offset().top;
+    const scrollTop = $(window).scrollTop();
+    const windowHeight = $(window).height();
+
+    if (scrollTop + windowHeight > cardTop + 50) {
+      $(this).addClass('show');
+
+      // 겹침 & 스택 느낌
+      $(this).css({
+        'z-index': $('.card').length - index,
+        'margin-top': index === 0 ? '0px' : `-${50}px`,
+        'transform': `translateY(0) scale(${1 - index*0.02})`
+      });
+    }
   });
 });
-
+});
