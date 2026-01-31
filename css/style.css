@@ -220,6 +220,7 @@ header .header_i .ham .ham_i .line {
   height: 375px;
   background-color: #666;
   border-radius: 30px;
+  overflow: hidden;
 }
 
 .profile .profile_i .profile_c .pc_top .top_text {
@@ -630,7 +631,9 @@ footer .footer_i {
 footer .footer_i .social {
   display: flex;
   gap: 0 24px;
+  display: none;
 }
+
 
 /* //footer */
 
